@@ -7,11 +7,11 @@ package sql
 
 import(
 	"github.com/garyburd/redigo/redis"
-	"server_back/config"
+	"server/config"
 	"time"
 	"fmt"
 	"encoding/json"
-	"server_back/datastruct"
+	"server/datastruct"
 	"strings"
 )
 

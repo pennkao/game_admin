@@ -5,8 +5,8 @@ package tool
 
 
 import(
-	"server_back/sql"
-	"server_back/datastruct"
+	"server/sql"
+	"server/datastruct"
 	"strconv"
 	"time"
 	"encoding/json"

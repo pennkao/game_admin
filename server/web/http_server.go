@@ -6,10 +6,10 @@ package web
 
 import(
 	"net/http"
-	"server_back/config"
+	"server/config"
 	"fmt"
 	"strconv"
-	"server_back/datastruct"
+	"server/datastruct"
 	"encoding/json"
 	"strings"
 )

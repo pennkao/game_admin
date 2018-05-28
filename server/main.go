@@ -5,8 +5,8 @@ package main
 
 import(
 	"runtime"
-	"server_back/web"
-	// "server_back/tool"
+	"server/web"
+	// "server/tool"
 )
 
 

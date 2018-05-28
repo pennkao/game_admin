@@ -9,10 +9,10 @@ import (
 	"time"
 	"strconv"
 	"net/http"
-	"server_back/sql"
+	"server/sql"
 	"fmt"
 	"encoding/json"
-	"server_back/datastruct"
+	"server/datastruct"
 )
 
 

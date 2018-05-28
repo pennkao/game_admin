@@ -8,7 +8,7 @@ import(
 	"time"
 	"fmt"
 	"strings"
-	"server_back/sql"
+	"server/sql"
 )
 
 
