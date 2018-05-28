@@ -1,0 +1,62 @@
+/**
+ * 文档样式表
+ * @author 强辰
+ */
+
+body
+{
+	background-image: url("../img/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+	
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	font-size: 15;
+}
+
+
+#title
+{
+	width: 100%;
+	padding-left: 15px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #333333;
+	color: #ffffff;
+}
+
+#dt
+{
+	margin-left: 14px;
+}
+
+
+
+#left, #right
+{
+	float: left;
+	height: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#left
+{
+	width: 15%;
+}
+
+
+#right
+{
+	width: 85%;
+}
+
+
+#info
+{
+	font-size: 13px;
+	color: #000000;
+	font-family: "微软雅黑";
+}

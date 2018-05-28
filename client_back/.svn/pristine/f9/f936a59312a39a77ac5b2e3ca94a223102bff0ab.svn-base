@@ -1,0 +1,113 @@
+/**
+ * 文档代码
+ * @author 强辰
+ */
+
+/**
+ * 发送请求
+ * @param {Object} url 地址
+ * @param {Object} data 数据（多个数据之间用逗号分隔）
+ * @param {Object} callback（请求的回调函数）
+ */
+function requstData(url, data, callback){
+	
+	
+	var xmlhttp;
+    if (window.ActiveXObject) {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    } else {
+        xmlhttp = new XMLHttpRequest();
+    }
+
+
+//	console.log(data);
+    xmlhttp.open("post", url , true);
+    xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    xmlhttp.send(data);
+    
+    xmlhttp.onreadystatechange = function(){
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var obj = JSON.parse(xmlhttp.responseText);
+            if(callback!=null){
+                callback(obj);
+            }
+        }
+    }
+    
+}
+
+
+
+/**
+ * 按钮点击方法
+ * @param {Object} data 数据
+ */
+function btnClick(data, fn){
+	var infotext = document.getElementById("info");
+	infotext.style.color = "#333333";
+	infotext.innerText = "正在查询，请稍后...\n(注：由于库存储量很大，部分查询耗时比较长.)";
+	
+	if(data == "1003"){
+		var dtime = document.getElementById("dt");
+		if(dtime.value == ""){
+			infotext.innerText = "请求失败! 请设置日期和时间.";
+			infotext.style.color = "#FF0000";
+			return;
+		}
+		data += ","+dtime.value
+	}
+	
+	var d = "data=" + data;
+	requstData(HOST_PORT + FORM, d, fn);
+}
+
+
+
+/**
+ * 显示总注册人数
+ * @param {Object} val
+ */
+function showRegs(val){
+	var infotext = document.getElementById("info");
+	infotext.innerText = "当前注册总人数：" + val.Data;
+}
+
+
+
+
+/**
+ * 显示关卡分布人员分布情况
+ * @param {Object} val
+ */
+function showCards(val){
+	var infotext = document.getElementById("info");
+	var data = val.Data;
+	var len = data.length;
+	
+	var ary = [];
+	for(var i=0; i<len; i++){
+		ary.push("关卡："+i + " / 包含用户数：" + data[i]);
+	}
+	
+	var s = ary.join("\n\n");
+	infotext.innerText = s;
+}
+
+
+
+/**
+ * 显示日登陆数据
+ * @param {Object} val
+ */
+function showDAU(val){
+	var infotext = document.getElementById("info");
+	infotext.innerText = "当前选择的日期登陆的用户数（DAU）：" + val.Data;
+}
+
+
+
+/**清理*/
+function btnClickClear(){
+	var infotext = document.getElementById("info");
+	infotext.innerText = "暂无任何查询";
+}

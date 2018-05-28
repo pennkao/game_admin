@@ -1,0 +1,38 @@
+<!--@author强辰-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Drawline Back Tool</title>
+		
+		<!--加载css样式表-->
+		<link rel="stylesheet" href="css/index.css" />
+		
+		<!--加载代码-->
+		<script type="text/javascript" src="js/config.js" ></script>
+		<script type="text/javascript" src="js/code.js" ></script>
+		
+		
+	</head>
+	<body onload="initcomplete()">
+		
+		<div id="title">手指画线后台工具</div>
+		
+		<div id="left">
+			&nbsp;&nbsp;&nbsp;选择查询项<br /><br />
+			&nbsp;&nbsp;&nbsp;<button id="btn1" onclick="btnClick('1001',showRegs)">注册人数</button><br/><br />
+			&nbsp;&nbsp;&nbsp;<button id="btn2" onclick="btnClick('1002',showCards)">关卡用户分布</button><br/><br />
+			&nbsp;&nbsp;&nbsp;<button id="btn3" onclick="btnClick('1003',showDAU)">DAU及留存</button><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;查询日期<input id="dt" type="datetime-local" /><br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;对比日期<input id="dt2" type="datetime-local" value="2018-01-01T23:59"/><br/><br />
+			&nbsp;&nbsp;&nbsp;<button id="btn4" onclick="btnClickClear()">清理查询结果</button><br/><br />
+		</div>
+		
+		
+		<div id="right">
+			查询结果<br /><br />
+			<label id="info">暂无任何查询</label>
+		</div>
+		
+	</body>
+</html>
