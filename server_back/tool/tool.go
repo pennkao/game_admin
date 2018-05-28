@@ -1,5 +1,5 @@
 //工具包
-//@author 强辰
+//@author 黄承武
 
 package tool
 

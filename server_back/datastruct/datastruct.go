@@ -1,5 +1,5 @@
 //数据结构
-//@author 强辰
+//@author 黄承武
 
 package datastruct
 

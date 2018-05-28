@@ -1,5 +1,5 @@
 //负责记录每日登陆用户数据服务（子服务，子线程）
-//@author 强辰
+//@author 黄承武
 
 
 package web

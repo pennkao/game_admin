@@ -1,7 +1,7 @@
 //数据库redis相关操作
 //注 ： redis 10库 ： 负责存储日登陆用户的总数（DAU）
 
-//@author 强辰
+//@author 黄承武
 
 package sql
 

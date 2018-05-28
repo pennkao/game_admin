@@ -1,5 +1,5 @@
 //手指画线数据后台服务
-//@author 强辰
+//@author 黄承武
 
 package main
 
